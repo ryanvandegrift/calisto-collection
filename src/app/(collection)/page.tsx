@@ -65,27 +65,18 @@ export default function CollectionHomePage() {
               meta="Flagship villas & residences"
               title="Calisto Hosting"
               text="The program for a small, handpicked network of villas and residences where Calisto runs every stay. Calisto Hosting combines luxury guest experience with disciplined operations, using CalistoOS, Calisto Pro, and Calisto Navigator to manage bookings, inspections, concierge, and reporting end-to-end, with Calisto Key, Signal, and 24·7 protecting each stay in the background."
-              list={[
-                <a key="hosting" href="/hosting" className="cal-link-btn">Explore Calisto Hosting →</a>
-              ]}
             />
 
             <FeatureCard
               meta="Second homes & primary residences"
               title="Calisto Management"
               text="Flagship home management for owners who want everything around their second home handled, including smart home, maintenance, projects, visits, and emergencies. Calisto Management uses Calisto Pro together with Key and Signal so doors, devices, and field teams stay aligned, with Calisto 24·7 available when something cannot wait for business hours."
-              list={[
-                <a key="mgmt" href="/management" className="cal-link-btn">Explore Calisto Management →</a>
-              ]}
             />
 
             <FeatureCard
               meta="Hotels, villa resorts & branded residences"
               title="Calisto Boutique"
               text="Long-term operating partnerships for boutique hotels, villa clusters, and branded residences. Calisto Boutique brings the same technology, playbooks, and guest philosophy used across the Collection to multi-key assets, with Calisto Pro, Key, Signal, and 24·7 supporting on-site teams and protecting owner and investor expectations."
-              list={[
-                <a key="boutique" href="/boutique" className="cal-link-btn">Explore Calisto Boutique →</a>
-              ]}
             />
           </div>
         </div>
