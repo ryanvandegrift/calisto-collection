@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Header from '@/components/layout/header';
 
 export const metadata: Metadata = {
   title: 'Calisto Collection - Luxury Property Operations',
@@ -12,9 +13,8 @@ export default function CollectionLayout({
 }) {
   return (
     <>
-      {/* Optional: Add Collection-specific navigation header here */}
+      <Header />
       {children}
-      {/* Optional: Add Collection-specific footer here */}
     </>
   );
 }
