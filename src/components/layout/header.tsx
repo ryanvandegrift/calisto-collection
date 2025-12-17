@@ -26,6 +26,8 @@ const ITEM_BASE = "rounded-[2px] px-3 py-2 transition text-black";
 const ITEM_TEXT_14 = "text-[14px] font-light";
 const CAP_TEXT = "text-[13px] font-light text-black/75";
 
+const BOOKINGS_URL = "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/";
+
 export default function CollectionHeader() {
   const pathname = usePathname();
 
@@ -40,39 +42,39 @@ export default function CollectionHeader() {
         name: "Calisto Hosting",
         category: "Luxury Rental Management",
         overview:
-          "Property management you can actually verify. Real-time transparency for luxury villa owners through photo evidence, readiness scoring, and complete operational visibility. Every arrival proven ready.",
+          "Property management you can actually verify. Photo evidence, readiness scoring, and real-time visibility into inspections, tasks, incidents, and spending.",
         highlights: [
           "Pre-arrival inspections with 40+ photos",
-          "AI-powered readiness verification",
-          "24/7 incident monitoring and response",
-          "Complete financial transparency with receipts",
-          "Professional guest communication with transcripts",
-          "Access control with entry/exit logging",
+          "Readiness verification against your baseline",
+          "24/7 monitoring and incident response",
+          "Financial transparency with receipts",
+          "Guest communication history with transcripts",
+          "Access control with entry and exit logs",
           "Task completion with photo proof",
-          "IoT sensor integration (water, smoke, access)",
-          "Revenue optimization without compromising quality",
-          "Real-time dashboard replacing monthly reports",
+          "Sensor integration for water, smoke, and access",
+          "Revenue strategy with standards protection",
+          "A real-time dashboard, not monthly reports",
         ],
         primaryCta: {
           label: "Request Property Assessment",
-          href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/",
+          href: BOOKINGS_URL,
         },
-        secondaryCta: { label: "See the technology", href: "/collection/hosting#technology" },
-        href: "/collection/hosting",
+        secondaryCta: { label: "See the technology", href: "/hosting#technology" },
+        href: "/hosting",
       },
       {
         key: "estates",
         name: "Calisto Estates",
         category: "Private Estate Management",
         overview:
-          "Discretion-first stewardship operated like a family office. Systematic governance with audit-grade documentation for high-net-worth principals. Complete accountability without constant involvement.",
+          "Discretion-first stewardship operated like a family office. Systematic governance with audit-grade documentation and clear accountability, without constant involvement.",
         highlights: [
-          "Systematic readiness maintenance",
+          "Readiness maintenance with documented standards",
           "Vendor governance with approval controls",
-          "Time-bounded access with complete audit trails",
-          "24/7 monitoring and incident documentation",
-          "NDA-ready communication protocols",
-          "Capital project governance with milestones",
+          "Time-bounded access with full audit trails",
+          "Monitoring with incident documentation",
+          "Confidential reporting and NDA-ready workflows",
+          "Capital projects governed by milestones",
           "Pre-arrival verification and briefings",
           "Monthly estate packs with evidence",
           "Limited client load by design",
@@ -80,32 +82,35 @@ export default function CollectionHeader() {
         ],
         primaryCta: {
           label: "Request Confidential Consultation",
-          href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/",
+          href: BOOKINGS_URL,
         },
-        secondaryCta: { label: "See our approach", href: "/collection/estates#approach" },
-        href: "/collection/estates",
+        secondaryCta: { label: "See our approach", href: "/estates#approach" },
+        href: "/estates",
       },
       {
         key: "boutique",
         name: "Calisto Boutique",
         category: "White-Label Hotel Operations",
         overview:
-          "Institutional discipline for independent hotels. Measurable commercial performance, verified quality standards, and stakeholder transparency—all under your brand. Independent doesn't have to mean opaque.",
+          "Institutional discipline for independent hotels. Measurable commercial performance, verified standards, and stakeholder transparency under your brand.",
         highlights: [
           "Weekly trading discipline with documented actions",
           "Room readiness verified with photo evidence",
-          "Financial governance and spending controls",
-          "Investor-grade dashboard and reporting",
-          "Quality assurance with AI verification",
+          "Financial governance and spend controls",
+          "Stakeholder dashboard and reporting",
+          "Quality assurance with verification workflows",
           "Commercial performance accountability",
           "Standards that survive staff turnover",
           "Incident management with timelines",
           "Monthly owner packs from system data",
-          "Your brand, our enterprise systems",
+          "Your brand, our operating systems",
         ],
-        primaryCta: { label: "Request Operations Assessment", href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/" },
-        secondaryCta: { label: "See the operating model", href: "/collection/boutique#operating-model" },
-        href: "/collection/boutique",
+        primaryCta: {
+          label: "Request Operations Assessment",
+          href: BOOKINGS_URL,
+        },
+        secondaryCta: { label: "See the operating model", href: "/boutique#operating-model" },
+        href: "/boutique",
       },
     ],
     []
@@ -244,13 +249,14 @@ export default function CollectionHeader() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/"
-              onClick={closeAll}
-              className="inline-flex h-9 items-center justify-center rounded-[2px] px-4 text-[14px] font-normal text-black shadow-[0_6px_16px_rgba(0,0,0,0.10)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)] transition"
+            <a
+            href={BOOKINGS_URL}
+            onClick={closeAll}
+            className="inline-flex h-9 items-center justify-center rounded-[2px] px-4 text-[14px] font-normal text-black bg-[#F6C1D9] shadow-[0_6px_16px_rgba(0,0,0,0.10)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)] transition"
             >
-              Schedule Consultation
-            </Link>
+            Schedule Consultation
+            </a>
+
           </div>
 
           {/* Mobile */}
@@ -291,7 +297,7 @@ export default function CollectionHeader() {
           onMouseLeave={scheduleClose}
         >
           <div className="grid grid-cols-[260px_1fr] gap-10">
-            {/* Left column: the 3 services */}
+            {/* Left column */}
             <div>
               <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">
                 SERVICES
@@ -324,7 +330,7 @@ export default function CollectionHeader() {
 
               <div className="mt-5 pt-4 border-t border-black/10">
                 <Link
-                  href="/collection"
+                  href="/"
                   onClick={closeAll}
                   className="text-[13px] font-light text-black/70 hover:text-black transition inline-flex items-center gap-2"
                 >
@@ -333,7 +339,7 @@ export default function CollectionHeader() {
               </div>
             </div>
 
-            {/* Right column: service-specific overview */}
+            {/* Right column */}
             <div className="min-w-0">
               <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">
                 {activeService.category.toUpperCase()}
@@ -360,14 +366,14 @@ export default function CollectionHeader() {
               </ul>
 
               <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-black/10">
-                <Link
+                <a
                   href={activeService.primaryCta.href}
                   onClick={closeAll}
                   className="inline-flex items-center justify-center rounded-[2px] px-4 py-2 text-[14px] font-normal text-black shadow-[0_10px_28px_rgba(0,0,0,0.10)] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition"
-                  style={{ background: "rgba(246,193,217,0.45)" }}
+                  style={{ background: "#F6C1D9", color: "#000" }}
                 >
                   {activeService.primaryCta.label}
-                </Link>
+                </a>
 
                 <Link
                   href={activeService.secondaryCta.href}
