@@ -11,7 +11,7 @@ export default function EstatesPage() {
       <HeroCover
         backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/estates-hero.jpg"
         kicker="Calisto Estates | Calisto Collection"
-        title="Calisto Estates: Private estate management with family-office discipline."
+        title="Calisto Estates: Private Estate Management with Family-Office Discipline."
         subtitle="Discretion-first stewardship with clear governance and a complete operating record. Principals and family offices get visibility without noise, plus NDA-ready documentation when it matters."
         primaryCTA={{
           text: 'Request Confidential Consultation',

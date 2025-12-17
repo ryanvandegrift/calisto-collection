@@ -11,7 +11,7 @@ export default function CollectionHomePage() {
       <HeroCover
         backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/collection-hero.jpg"
         kicker="Calisto Collection"
-        title="Calisto Collection: Flagship homes, villas, and boutique hotels operated by Calisto."
+        title="Calisto Collection: Flagship Estates, Villa Rentals, and Boutique Hotels operated by Calisto."
         subtitle="A private portfolio run on Calisto Pro with live visibility into inspections, readiness, incidents, access, and spending. Standards are not promised. They are documented."
         primaryCTA={{
           text: 'Explore Services',

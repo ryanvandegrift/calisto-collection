@@ -10,9 +10,9 @@ export default function HostingPage() {
     <>
       <HeroCover
         backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/hosting-hero.jpg"
-        kicker="Calisto Hosting"
-        title="Property management you can actually verify."
-        subtitle="A luxury rental program built on real evidence. See inspections, task completion, incidents, and spending with receipts in one place, in real time."
+        kicker="Calisto Hosting | Calisto Collection"
+        title="Calisto Hosting: Luxury Rental Management You Can Verify."
+        subtitle="A luxury rental program built on evidence. See inspections, readiness, incidents, access, and spending with receipts in one place, in real time."
         primaryCTA={{
           text: 'Request Property Assessment',
           href: 'https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/',
@@ -21,8 +21,8 @@ export default function HostingPage() {
           text: 'See the Technology',
           href: '#technology',
         }}
-        meta="Real-time visibility | Photo evidence | 24/7 monitoring | Audit trails"
-        tagline="If your manager cannot show the receipts, you are buying promises."
+        meta="Real-Time Visibility | Photo Evidence | 24/7 Monitoring | Full Audit Trails"
+        tagline="If Your Manager Cannot Show The Receipts, You Are Buying Promises."
       />
 
       {/* The fundamental problem */}
@@ -30,18 +30,18 @@ export default function HostingPage() {
         <div className="cal-main-inner">
           <SectionIntro
             kicker="The Question"
-            heading="How do you know your property is actually ready?"
-            description="You own a $5M villa. Your manager texts, “The property is ready for guests.” No photos. No verification. You are 2,000 miles away, expected to trust."
+            heading="How Do You Know Your Property Is Ready?"
+            description="You own a $5M villa. You get a text that says: “Property is ready.” No photos. No checklist. No verification. You are expected to trust from 2,000 miles away."
           />
 
           <div className="cal-compare-grid">
             <CompareCard
               title="Traditional Management"
-              text="Monthly reports with vague summaries. You learn about problems when guests complain. Quality depends on whoever showed up that day. There is no real-time visibility."
+              text="Monthly summaries with vague updates. You hear about problems when guests complain. Quality depends on who is on shift. Little real visibility."
             />
             <CompareCard
               title="Calisto Hosting"
-              text="Open your phone and see the inspection photos from today. Review verification against your baseline and a readiness score. See what was fixed and when. Every arrival is checked and documented."
+              text="Open your portal. Review inspection photos from today. See readiness scoring and verification against your baseline. Track the items found and the items resolved. Every arrival verified."
             />
           </div>
         </div>
@@ -51,81 +51,81 @@ export default function HostingPage() {
       <section className="cal-section-block" id="difference">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="The Calisto Difference"
-            heading="Excellence you can see, not just hear about."
-            description="Calisto Hosting is built for owners who want clear proof. Standards are verified, tasks are documented, incidents have timelines, and spending is tied to receipts."
+            kicker="The Standard"
+            heading="Evidence First. Standards Enforced."
+            description="Calisto Hosting is built for owners who want clarity. Every standard is documented. Every claim is backed by proof."
           />
 
           <div className="cal-feature-grid cal-feature-grid--with-intro">
             <FeatureCard
               meta="Verification"
-              title="Readiness is measured, not assumed"
-              text="Before every arrival we run inspections with photo documentation, verify condition against your approved baseline, and close any gaps before check-in."
+              title="Readiness Is Measured"
+              text="Before every arrival: inspections with photo evidence, verification against your approved baseline, and re-checks when corrections are required."
               list={[
                 'Pre-arrival inspections with 40+ photo points per property',
-                'Baseline comparison against approved condition',
-                'Readiness scoring with correction and re-check',
-                'Condition history tracked over time',
+                'Verification against your approved condition baseline',
+                'Readiness scoring with correction and re-verification',
+                'Photo history that tracks condition over time',
               ]}
             />
 
             <FeatureCard
               meta="Transparency"
-              title="Real-time visibility, not monthly summaries"
-              text="Your Calisto One portal shows arrivals, departures, task completion, incidents, and spending with receipts. You can verify what happened and when."
+              title="Real-Time Visibility"
+              text="Your portal shows arrivals, departures, task completion with timestamps, spending with receipts, and incident timelines."
               list={[
-                'Reservations and activity logging',
+                'Reservations and guest activity logged',
                 'Task completion with photo proof and timestamps',
-                'Owner billing with line-item detail and receipts',
-                'Work orders tracked from creation to closeout',
+                'Owner billing with line items and receipt attachments',
+                'Work orders tracked from start to close',
               ]}
             />
 
             <FeatureCard
               meta="Protection"
-              title="Monitoring that turns alerts into action"
-              text="Sensors can detect water leaks, smoke, temperature issues, and access events. Alerts become managed incidents with documented response and prevention notes."
+              title="24/7 Monitoring With Documentation"
+              text="Sensors detect water leaks, smoke, and access events. Alerts become incidents with timelines, actions, outcomes, and prevention notes."
               list={[
-                'Monitoring coverage across time zones',
-                'Incident timelines from detection to resolution',
-                'Playbook-driven response protocols',
-                'Documentation suitable for insurance and liability',
+                'Global monitoring across time zones',
+                'Incident timelines: detection to response to resolution',
+                'Playbook-driven handling',
+                'Documentation for insurance and liability',
               ]}
             />
 
             <FeatureCard
               meta="Experience"
-              title="Guest service without compromising standards"
-              text="Calls, messages, and requests are handled professionally and tracked in the operating record. Service stays consistent without cutting corners."
+              title="Guest Service With Accountability"
+              text="Calls and messages are handled professionally, logged, and traceable. Concierge activity is tracked through completion."
               list={[
-                '“Alex with Calisto” answers calls with escalation as needed',
-                'Call transcripts and communication history',
+                'Calls answered and managed consistently',
+                'Communication history and transcripts available',
                 'Concierge requests tracked to resolution',
-                'Experience bookings and add-on revenue per stay',
+                'Add-ons and experience bookings tracked per stay',
               ]}
             />
 
             <FeatureCard
               meta="Financial Clarity"
-              title="Line-item accountability"
-              text="Every expense is tied to a specific task, with supporting documentation. If you see a charge, you can see the work behind it."
+              title="Every Charge Has Evidence"
+              text="Expenses are tied to work orders with receipts and before/after documentation. No mystery lines."
               list={[
-                'Open any charge to view the work order and evidence',
-                'Before and after photos for maintenance tasks',
+                'Click any charge to see the work order and receipts',
+                'Before/after photos for maintenance work',
                 'Approval workflows for spending thresholds',
-                'Audit trail for decisions and transactions',
+                'Complete audit trail for transactions',
               ]}
             />
 
             <FeatureCard
               meta="Access Control"
-              title="Know who enters your property"
-              text="Digital access can be time-bounded for staff and vendors. Every entry is logged. No shared codes as the default operating posture."
+              title="Know Who Entered, When, And Why"
+              text="Time-limited access for staff and vendors with entry/exit logs. No shared codes."
               list={[
-                'Role-based access with expiration',
-                'Entry and exit logs for audit trails',
-                'Showing activity tracked and documented',
+                'Role-based access with automatic expiration',
+                'Entry and exit logs for a complete record',
                 'Vendor access tied to specific work orders',
+                'Access reports available anytime',
               ]}
             />
           </div>
@@ -137,30 +137,30 @@ export default function HostingPage() {
         <div className="cal-main-inner">
           <SectionIntro
             kicker="Calisto Pro Platform"
-            heading="Enterprise systems behind white-glove service."
-            description="Calisto Hosting runs on Calisto Pro, the same institutional platform used across Calisto Collection. It is built for operational control, not marketing dashboards."
+            heading="Enterprise Systems Behind White-Glove Service."
+            description="Calisto Hosting runs on Calisto Pro, the same operations platform used across Calisto Collection."
           />
 
           <div className="cal-feature-grid cal-feature-grid--with-intro">
             <FeatureCard
               meta="Calisto Ops"
-              title="Operations engine"
-              text="Tasks, workflows, approvals, and documentation connected in one operating record."
+              title="Operations Engine"
+              text="Tasks, workflows, approvals, and records in one system."
               list={[
-                'Reservation and calendar coordination',
-                'Task assignment with photo proof requirements',
+                'Calendar coordination and stay operations',
+                'Task assignment with evidence requirements',
                 'Vendor management with QA sign-off',
-                'Complete financial transaction history',
+                'Full transaction history and documentation',
               ]}
             />
 
             <FeatureCard
               meta="Calisto Assure"
-              title="Quality verification"
-              text="Inspections with evidence trails, baseline comparison, and readiness scoring."
+              title="Quality Verification"
+              text="Inspections with evidence and verification against your baseline."
               list={[
                 'Custom inspection routes for your property',
-                'Baseline comparison and anomaly detection',
+                'Verification and anomaly detection',
                 'Readiness scoring before arrivals',
                 'Findings tracked with severity and due dates',
               ]}
@@ -168,49 +168,49 @@ export default function HostingPage() {
 
             <FeatureCard
               meta="Calisto Signal"
-              title="24/7 monitoring"
-              text="Monitoring that produces a documented incident record, not just alerts."
+              title="24/7 Monitoring"
+              text="Monitoring that turns alerts into managed incidents with outcomes."
               list={[
-                'Water leak, smoke, temperature, and access monitoring',
+                'Water, smoke, and access monitoring',
                 'Incident timelines with escalation protocols',
                 'Coverage across time zones',
-                'Insurance-ready documentation packs',
+                'Insurance-ready documentation',
               ]}
             />
 
             <FeatureCard
               meta="Calisto 24/7"
-              title="Professional communication"
-              text="Calls and messages handled with consistency, documentation, and escalation rules."
+              title="Professional Communication"
+              text="Calls and messages handled consistently, logged, and traceable."
               list={[
-                'Dedicated forwarding number per property',
-                'Professional answering service',
-                'Transcripts and call summaries',
-                'Message management and routing',
+                'Dedicated routing per property',
+                'Professional call answering',
+                'Transcripts and summaries',
+                'Message management and escalation',
               ]}
             />
 
             <FeatureCard
               meta="Calisto Navigator"
-              title="Guest portal"
-              text="A branded guest experience for house info, service requests, and upgrades."
+              title="Guest Portal"
+              text="Digital check-in, house info, service requests, and upgrades."
               list={[
-                'Digital check-in workflows',
+                'Digital check-in',
                 'House manual and local information',
                 'Service request tracking',
-                'Experience bookings and add-ons',
+                'Add-ons and upgrades',
               ]}
             />
 
             <FeatureCard
               meta="Calisto Access"
-              title="Access control"
-              text="Time-bounded digital access with complete logs."
+              title="Access Governance"
+              text="Time-bounded access with audit trails."
               list={[
                 'Digital key issuance and management',
-                'Time-limited vendor access codes',
-                'Entry and exit logging',
-                'Smart lock integrations where available',
+                'Time-limited vendor access',
+                'Entry/exit logging and reporting',
+                'Smart lock integration options',
               ]}
             />
           </div>
@@ -221,35 +221,35 @@ export default function HostingPage() {
       <section className="cal-section-block" id="proof">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="The Receipts"
-            heading="See the evidence before you decide."
-            description="We can share redacted examples of inspection records, incident documentation, owner packs, and financial transparency. This is what replaces “trust us.”"
+            kicker="Evidence"
+            heading="Evaluate The Artifacts."
+            description="We can share redacted examples of reports, inspection records, incident documentation, and owner packs."
           />
 
           <div className="cal-compare-grid">
             <CompareCard
               title="Pre-Arrival Readiness Report"
-              text="Inspection results with photos, verification against baseline, readiness score, items found, and proof of resolution with a re-check."
+              text="Inspection results with photos, readiness scoring, items identified, items resolved, and re-check evidence."
             />
             <CompareCard
-              title="Incident Response Documentation"
-              text="A water leak alert with a complete timeline: detection time, dispatch, arrival, resolution, photos, and a prevention plan."
+              title="Incident Documentation"
+              text="Detection, response, actions, resolution, and prevention notes with supporting photos."
             />
             <CompareCard
               title="Monthly Owner Pack"
-              text="Revenue summary, occupancy metrics, completed maintenance with evidence, guest satisfaction, and upcoming priorities generated from system records."
+              text="Revenue summary, occupancy metrics, maintenance completed with evidence, and priorities generated from system records."
             />
             <CompareCard
-              title="Task Completion Evidence"
-              text="HVAC maintenance with a full chain: work order, arrival time, service performed, photo proof, QA sign-off, invoice, and payment record."
+              title="Task Evidence Chain"
+              text="Work order to arrival time to completion proof to QA sign-off to invoice and payment."
             />
             <CompareCard
               title="Access Activity Log"
-              text="A clear entry log for staff, vendors, and showings with time windows and purpose. Every entry is timestamped and recorded."
+              text="Entry windows and timestamps for staff, vendors, and scheduled visits."
             />
             <CompareCard
-              title="Guest Communication History"
-              text="Call transcripts, message history, and service requests with resolution times and outcomes in one audit trail."
+              title="Communication History"
+              text="Calls, messages, requests, and resolution outcomes with timestamps."
             />
           </div>
 
@@ -272,45 +272,45 @@ export default function HostingPage() {
       <section className="cal-section-block cal-section-block--accent" id="ideal-client">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="Is This For You?"
-            heading="Built for owners who want verification, not reassurance."
-            description="Calisto Hosting is designed for luxury owners who care about standards, accountability, and a defensible operating record."
+            kicker="Fit"
+            heading="Built For Owners Who Demand Proof."
+            description="Calisto Hosting is for owners who want transparency, verified standards, and clean accountability."
           />
 
           <div className="cal-feature-grid cal-feature-grid--with-intro">
             <FeatureCard
               meta="The Global Owner"
-              title="Multiple properties across countries"
-              text="You cannot be everywhere, but you can see everything. Run your portfolio from one dashboard with consistent standards."
+              title="Multiple Properties Across Countries"
+              text="You cannot be everywhere. You can still have complete visibility."
               list={[
                 'Unified dashboard across properties',
-                'Consistent quality standards',
-                'Real-time alerts across time zones',
-                'Portfolio-level performance analytics',
+                'Consistent standards across the portfolio',
+                'Alerts regardless of time zone',
+                'Portfolio-level performance visibility',
               ]}
             />
 
             <FeatureCard
               meta="The Second-Home Owner"
-              title="Your family escape, protected"
-              text="Your home should feel perfect when you arrive. When you are away, you should be able to verify how it is being maintained."
+              title="Your Home Is Your Standard"
+              text="You want your home ready when you arrive, and proof it stayed that way while you were away."
               list={[
                 'Pre-arrival verification for personal use',
-                'Maintenance scheduled around your visits',
-                'Vendor governance and approval controls',
+                'Maintenance scheduled around visits',
+                'Vendor governance and approvals',
                 'Visibility without daily involvement',
               ]}
             />
 
             <FeatureCard
               meta="The Investor"
-              title="Income with asset protection"
-              text="Performance matters, but so does preservation. We optimize revenue while protecting quality and long-term value."
+              title="Income With Asset Protection"
+              text="Returns matter, but so does long-term condition. You should see both."
               list={[
-                'Financial transparency with line-item detail',
+                'Line-item financial transparency',
                 'Standards that protect asset value',
-                'Occupancy and revenue analytics',
-                'Incident documentation for insurance and liability',
+                'Revenue analytics and reporting',
+                'Incident documentation for risk management',
               ]}
             />
           </div>
@@ -322,56 +322,56 @@ export default function HostingPage() {
         <div className="cal-main-inner">
           <SectionIntro
             kicker="How It Works"
-            heading="From baseline to consistent performance."
-            description="We establish your baseline and operating rules, set up systems, train the team, then run a documented cadence for every stay."
+            heading="Baseline, Then Continuous Verification."
+            description="We establish your approved baseline, install the operating system, then run the property with ongoing evidence and reporting."
           />
 
           <div className="cal-feature-grid cal-feature-grid--with-intro">
             <FeatureCard
               meta="Phase 1"
-              title="Baseline and standards"
-              text="We document the approved condition, define standards, set inspection routes, and align readiness thresholds."
+              title="Baseline And Standards"
+              text="We document your approved condition and configure inspection and readiness standards."
               list={[
-                'Approved baseline documentation',
-                'Room-by-room inventory and condition notes',
-                'Quality standards aligned to your preferences',
+                'Baseline documentation of approved condition',
+                'Room-by-room inventory and notes',
+                'Inspection routes and readiness thresholds',
                 'Access plan and vendor governance',
               ]}
             />
 
             <FeatureCard
               meta="Phase 2"
-              title="Technology setup"
-              text="We configure Calisto Pro for your property, connect systems, install monitoring where needed, and grant portal access."
+              title="Platform Setup"
+              text="We configure Calisto Pro, connect key systems, and establish monitoring and access governance."
               list={[
-                'Calisto One portal configured for your property',
-                'Sensor installation where desired',
-                'Smart lock integration and access rules',
-                'Channel and PMS connections when applicable',
+                'Calisto portal configured for your property',
+                'Monitoring setup based on coverage needs',
+                'Access governance configuration',
+                'Integration planning where applicable',
               ]}
             />
 
             <FeatureCard
               meta="Phase 3"
-              title="Team training and launch"
-              text="We train local teams on standards and protocols, complete the first verified inspection, and go live."
+              title="Team Launch"
+              text="We train teams on standards and evidence workflows, then go live with verified operations."
               list={[
-                'Staff training on inspection and documentation',
-                'QA verification process setup',
-                'First baseline inspection and verification',
-                'Guest communication setup and testing',
+                'Training on inspection and evidence capture',
+                'QA verification process',
+                'First verified inspection cycle',
+                'Guest communication setup',
               ]}
             />
 
             <FeatureCard
               meta="Ongoing"
-              title="Operations and improvement"
-              text="Every stay cycle includes readiness verification, task execution with proof, incident response, and trend review for prevention."
+              title="Operate With Proof"
+              text="Each stay cycle includes verification, documented execution, incident response, and trend-based prevention."
               list={[
                 'Pre-arrival inspections with photo evidence',
-                'Task completion tracking with QA sign-off',
-                'Monitoring and incident coordination',
-                'Monthly performance review and optimization',
+                'Work orders tracked to completion',
+                'Incident response with timelines',
+                'Performance and prevention reviews',
               ]}
             />
           </div>
@@ -383,40 +383,35 @@ export default function HostingPage() {
         <div className="cal-main-inner">
           <SectionIntro
             kicker="Investment"
-            heading="Premium service with transparent economics."
-            description="Calisto Hosting is designed for owners who want a higher standard and the documentation to back it up."
+            heading="Premium Service With Transparent Value."
+            description="You are paying for disciplined operations, verified standards, and a complete operating record."
           />
 
           <div className="cal-compare-grid">
             <CompareCard
-              title="What you are paying for"
-              text="Platform access, verified readiness, documented operations, professional support, incident coordination, and receipt-level transparency."
+              title="What You Are Paying For"
+              text="Verified inspections, real-time visibility, documented incident management, clear financial records, and professional operations."
             />
             <CompareCard
-              title="What you are not paying for"
-              text="Opaque reporting, unexplained charges, surprises discovered by guests, and standards that depend on luck."
+              title="What You Are Not Paying For"
+              text="Opacity, vague summaries, surprise charges, and learning about problems from guests."
             />
           </div>
 
           <div style={{ marginTop: '2rem' }}>
-            <h3 style={{ marginBottom: '1rem' }}>Typical investment range</h3>
+            <h3 style={{ marginBottom: '1rem' }}>Typical Investment Range</h3>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-              <strong>Management fees:</strong> 15 to 22% of rental revenue (based on property, market, and scope)<br />
-              <strong>Technology platform:</strong> included in management fee<br />
-              <strong>Setup and baseline:</strong> one-time fee based on property size<br />
-              <strong>IoT devices:</strong> a la carte based on desired monitoring level<br />
-              <br />
-              <em>Typical property revenue: $200K to $800K+ annually</em>
+              <strong>Management fees:</strong> 15–22% of rental revenue (based on property profile and service scope)<br />
+              <strong>Platform access:</strong> Included<br />
+              <strong>Setup & baseline:</strong> One-time fee based on property size<br />
+              <strong>Monitoring devices:</strong> À la carte based on coverage needs
             </p>
           </div>
 
           <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(246, 193, 217, 0.1)', borderRadius: '8px' }}>
-            <h4 style={{ marginBottom: '0.5rem' }}>A simple lens</h4>
+            <h4 style={{ marginBottom: '0.5rem' }}>The Real Cost Is Uncertainty</h4>
             <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-              The cost of opacity is real: delayed maintenance, avoidable damage, reputation loss, and time spent chasing answers.
-              <br />
-              <br />
-              <strong>Calisto Hosting reduces uncertainty by keeping a clean operating record.</strong>
+              A missed maintenance issue can become a major claim. A preventable guest failure can damage your brand. Calisto Hosting reduces risk by operating with evidence.
             </p>
           </div>
         </div>
@@ -427,79 +422,48 @@ export default function HostingPage() {
         <div className="cal-main-inner">
           <SectionIntro
             kicker="Questions"
-            heading="What owners ask before making the switch."
-            description="The due diligence conversations that happen before you entrust a high-value asset."
+            heading="What Owners Ask Before Switching."
+            description="Straight answers for serious owners."
           />
 
           <div className="cal-faq-grid">
             <FAQCard
-              question="How is this different from other “luxury” property managers?"
-              answer="Most managers provide updates and monthly reporting. Calisto provides verification. You can review inspection photos, see task completion with timestamps, track incidents with timelines, and open any charge to view the receipts and supporting evidence."
+              question="How is this different from other luxury managers?"
+              answer="We operate with proof. You see inspections, readiness, incident logs, and spending with receipts. Most managers summarize. We document."
             />
 
             <FAQCard
               question="Do I need to check the portal constantly?"
-              answer="No. You get visibility without the burden. Alerts are reserved for what matters, and the portal is there when you want answers quickly."
-            />
-
-            <FAQCard
-              question="What if I am happy with my current manager?"
-              answer="That is great. The key question is whether you can verify performance. If you can see inspections, documentation, receipts, and incident records, you are already closer to the standard we believe owners deserve."
-            />
-
-            <FAQCard
-              question="Is this only for tech-savvy owners?"
-              answer="No. The portal is designed to be straightforward. The complexity stays behind the scenes, and you have support when you need it."
+              answer="No. You use it when you want clarity. You can also choose alerts only when decisions or exceptions require your attention."
             />
 
             <FAQCard
               question="What happens when something goes wrong?"
-              answer="Incidents become managed timelines with documentation. If there is a leak at night, the response actions, vendor dispatch, resolution, photos, and next steps are recorded and available to you."
+              answer="Issues become incidents with timelines, actions, outcomes, and prevention notes. You receive the record, not a story."
             />
 
             <FAQCard
-              question="Can you work with my existing systems?"
-              answer="Often, yes. Calisto Pro can integrate with many reservation platforms and smart home devices. The goal is a single operating record, not more fragmentation."
+              question="Can you integrate with what I already use?"
+              answer="Often yes. We aim for one operating record, not more fragmentation. We align integrations based on your systems and the property profile."
             />
 
             <FAQCard
-              question="Do you manage properties outside the Dominican Republic and Spain?"
-              answer="We are expanding strategically. If your property is in another market, we can discuss availability and timing."
+              question="Do you operate outside DR and Spain?"
+              answer="We are expanding. If your property is elsewhere, we can discuss coverage and timing based on your market."
             />
 
             <FAQCard
               question="What is the onboarding timeline?"
-              answer="Assessment typically takes about a week. Baseline documentation and setup usually take 2 to 3 weeks, followed by training and launch. Full optimization improves over the first 30 to 60 days as trend data builds."
+              answer="Assessment and baseline documentation typically take a few weeks, then we launch with verified operations. We move deliberately because the goal is lasting standards."
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio */}
-      <section className="cal-section-block cal-section-block--accent" id="portfolio">
-        <div className="cal-main-inner">
-          <SectionIntro
-            kicker="Our Portfolio"
-            heading="A small portfolio run to one standard."
-            description="Every Calisto Hosting home operates on the same systems, the same verification model, and the same documentation discipline."
-          />
-
-          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
-              <strong>Dominican Republic:</strong> 12 luxury villas<br />
-              <strong>Spain:</strong> 6 premium properties<br />
-              <strong>Guest rating:</strong> 5.0 across the portfolio<br />
-              <strong>Owner retention:</strong> 100%<br />
-              <strong>Operational disputes:</strong> near zero when documentation is complete
-            </p>
           </div>
         </div>
       </section>
 
       <FooterCTA
         backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/hosting-footer.jpg"
-        title="Property management you can actually verify."
-        text="Schedule a property assessment and see how Calisto Hosting delivers visibility, accountability, and peace of mind."
+        title="Property Management You Can Verify."
+        text="Schedule a property assessment and see how Calisto Hosting operates with evidence, clarity, and accountability."
         ctaText="Request Property Assessment"
         ctaHref="https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/"
       />
