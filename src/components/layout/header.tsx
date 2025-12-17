@@ -6,17 +6,17 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type Service = {
-  key: "hosting" | "management" | "boutique";
+  key: "hosting" | "estates" | "boutique";
   name: string;
   category: string;
   overview: string;
   highlights: string[];
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
-  href: string; // Explore page
+  href: string;
 };
 
-type MenuKey = null | "hosting" | "management" | "boutique";
+type MenuKey = null | "hosting" | "estates" | "boutique";
 
 const PINK_BG = "bg-[rgba(246,193,217,0.30)]";
 const PINK_HOVER = "hover:bg-[rgba(246,193,217,0.30)]";
@@ -38,70 +38,85 @@ export default function CollectionHeader() {
       {
         key: "hosting",
         name: "Calisto Hosting",
-        category: "Professionally Managed Vacation Rentals",
+        category: "Luxury Rental Management",
         overview:
-          "Our luxury vacation rental service for high-end villas and homes across the Dominican Republic and Spain—professional management, quality standards, and premium guest experiences powered by Calisto One.",
+          "Property management you can actually verify. Real-time transparency for luxury villa owners through photo evidence, readiness scoring, and complete operational visibility. Every arrival proven ready.",
         highlights: [
-          "Professional photography + listing optimization",
-          "Distribution across Airbnb, Booking.com, VRBO + direct",
-          "Guest screening + digital check-in via Calisto Navigator",
-          "Housekeeping, maintenance, and inspections via Calisto Assure",
-          "Owner portal: revenue, expenses, calendar control, status",
-          "Digital access + time-bound entry via Calisto Key",
-          "Monthly statements + transparent reporting",
-          "24/7 guest support + incident response",
+          "Pre-arrival inspections with 40+ photos",
+          "AI-powered readiness verification",
+          "24/7 incident monitoring and response",
+          "Complete financial transparency with receipts",
+          "Professional guest communication with transcripts",
+          "Access control with entry/exit logging",
+          "Task completion with photo proof",
+          "IoT sensor integration (water, smoke, access)",
+          "Revenue optimization without compromising quality",
+          "Real-time dashboard replacing monthly reports",
         ],
-        primaryCta: { label: "Apply to join Hosting", href: "/hosting/apply" },
-        secondaryCta: { label: "Browse properties", href: "/properties" },
-        href: "/hosting",
+        primaryCta: {
+          label: "Request Property Assessment",
+          href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/",
+        },
+        secondaryCta: { label: "See the technology", href: "/collection/hosting#technology" },
+        href: "/collection/hosting",
       },
       {
-        key: "management",
-        name: "Calisto Management",
-        category: "Second Home Care & Monitoring",
+        key: "estates",
+        name: "Calisto Estates",
+        category: "Private Estate Management",
         overview:
-          "Professional home care for second-home owners who don’t rent. We monitor, inspect, coordinate service, and respond to issues—keeping you informed through Calisto Navigator.",
+          "Discretion-first stewardship operated like a family office. Systematic governance with audit-grade documentation for high-net-worth principals. Complete accountability without constant involvement.",
         highlights: [
-          "24/7 monitoring + alerts with Calisto Signal",
-          "Leak, entry, camera, and climate monitoring",
-          "Scheduled inspections with photo logs via Calisto Assure",
-          "Vendor management + quality control",
-          "Emergency response + repair coordination",
-          "Budget control: approve major work, we execute",
-          "Pre-arrival preparation + concierge coordination",
-          "Dashboard visibility: inspections, expenses, work status",
+          "Systematic readiness maintenance",
+          "Vendor governance with approval controls",
+          "Time-bounded access with complete audit trails",
+          "24/7 monitoring and incident documentation",
+          "NDA-ready communication protocols",
+          "Capital project governance with milestones",
+          "Pre-arrival verification and briefings",
+          "Monthly estate packs with evidence",
+          "Limited client load by design",
+          "Family office-grade accountability",
         ],
-        primaryCta: { label: "Apply for Management", href: "/management/apply" },
-        secondaryCta: { label: "Learn about Calisto Signal", href: "/signal" },
-        href: "/management",
+        primaryCta: {
+          label: "Request Confidential Consultation",
+          href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/",
+        },
+        secondaryCta: { label: "See our approach", href: "/collection/estates#approach" },
+        href: "/collection/estates",
       },
       {
         key: "boutique",
         name: "Calisto Boutique",
-        category: "Boutique Hotel Management",
+        category: "White-Label Hotel Operations",
         overview:
-          "Hands-on management services for boutique hotels—operated under the local ownership entity, with Calisto running the hotel day-to-day like a modern luxury collection model (in the spirit of Marriott’s Tribute Portfolio / Luxury Collection).",
+          "Institutional discipline for independent hotels. Measurable commercial performance, verified quality standards, and stakeholder transparency—all under your brand. Independent doesn't have to mean opaque.",
         highlights: [
-          "Operational leadership + SOPs built for boutique hotels",
-          "Revenue management + channel strategy",
-          "Brand positioning + guest experience design",
-          "Staffing, training, and performance management",
-          "Quality standards + inspections with evidence trails",
-          "Guest messaging + service workflows via Calisto One",
-          "Owner reporting: financials, KPIs, and action plans",
-          "On-property audits + continuous improvement",
+          "Weekly trading discipline with documented actions",
+          "Room readiness verified with photo evidence",
+          "Financial governance and spending controls",
+          "Investor-grade dashboard and reporting",
+          "Quality assurance with AI verification",
+          "Commercial performance accountability",
+          "Standards that survive staff turnover",
+          "Incident management with timelines",
+          "Monthly owner packs from system data",
+          "Your brand, our enterprise systems",
         ],
-        primaryCta: { label: "Talk to our team", href: "/boutique/contact" },
-        secondaryCta: { label: "Explore Boutique", href: "/boutique" },
-        href: "/boutique",
+        primaryCta: { label: "Request Operations Assessment", href: "https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/" },
+        secondaryCta: { label: "See the operating model", href: "/collection/boutique#operating-model" },
+        href: "/collection/boutique",
       },
     ],
     []
   );
 
-  const activeService = useMemo(() => services.find((s) => s.key === open) ?? services[0], [open, services]);
+  const activeService = useMemo(
+    () => services.find((s) => s.key === open) ?? services[0],
+    [open, services]
+  );
 
-  // Hide on scroll down / show on scroll up (never hide while menu is open)
+  // Hide on scroll down / show on scroll up
   useEffect(() => {
     let lastY = window.scrollY;
     let ticking = false;
@@ -178,11 +193,15 @@ export default function CollectionHeader() {
       ].join(" ")}
       onMouseEnter={clearCloseTimer}
     >
-      {/* Use your standard container */}
       <div className="cal-main-inner">
         <div className="flex h-16 items-center justify-between gap-6">
           {/* Brand */}
-          <Link href="/" className="inline-flex items-center gap-3" onClick={closeAll} aria-label="Calisto Collection home">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-3"
+            onClick={closeAll}
+            aria-label="Calisto Collection home"
+          >
             <Image
               src="https://calistomedia.blob.core.windows.net/calisto-one/calisto_logo_300.png"
               alt="Calisto"
@@ -192,31 +211,45 @@ export default function CollectionHeader() {
               priority
             />
             <div className="leading-tight">
-              <div className="text-[16px] font-medium tracking-[-0.01em] text-black">Calisto &amp; Co.</div>
-              <div className="text-[12px] tracking-[0.18em] text-black/60 uppercase">Collection</div>
+              <div className="text-[16px] font-medium tracking-[-0.01em] text-black">
+                Calisto &amp; Co.
+              </div>
+              <div className="text-[12px] tracking-[0.18em] text-black/60 uppercase">
+                Collection
+              </div>
             </div>
           </Link>
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-7" aria-label="Primary">
-            <TopNavButton label="Calisto Hosting" open={open === "hosting"} onOpen={() => openMenu("hosting")} controlsId="menu-hosting" />
             <TopNavButton
-              label="Calisto Management"
-              open={open === "management"}
-              onOpen={() => openMenu("management")}
-              controlsId="menu-management"
+              label="Calisto Hosting"
+              open={open === "hosting"}
+              onOpen={() => openMenu("hosting")}
+              controlsId="menu-hosting"
             />
-            <TopNavButton label="Calisto Boutique" open={open === "boutique"} onOpen={() => openMenu("boutique")} controlsId="menu-boutique" />
+            <TopNavButton
+              label="Calisto Estates"
+              open={open === "estates"}
+              onOpen={() => openMenu("estates")}
+              controlsId="menu-estates"
+            />
+            <TopNavButton
+              label="Calisto Boutique"
+              open={open === "boutique"}
+              onOpen={() => openMenu("boutique")}
+              controlsId="menu-boutique"
+            />
           </nav>
 
           {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/contact"
+              href="https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/"
               onClick={closeAll}
               className="inline-flex h-9 items-center justify-center rounded-[2px] px-4 text-[14px] font-normal text-black shadow-[0_6px_16px_rgba(0,0,0,0.10)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)] transition"
             >
-              Contact
+              Schedule Consultation
             </Link>
           </div>
 
@@ -244,17 +277,25 @@ export default function CollectionHeader() {
         />
       )}
 
-      {/* Mega menu (one service at a time) */}
+      {/* Mega menu */}
       {open && (
         <MegaMenuDock
-          id={open === "hosting" ? "menu-hosting" : open === "management" ? "menu-management" : "menu-boutique"}
+          id={
+            open === "hosting"
+              ? "menu-hosting"
+              : open === "estates"
+              ? "menu-estates"
+              : "menu-boutique"
+          }
           onMouseEnter={clearCloseTimer}
           onMouseLeave={scheduleClose}
         >
           <div className="grid grid-cols-[260px_1fr] gap-10">
             {/* Left column: the 3 services */}
             <div>
-              <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">SERVICES</div>
+              <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">
+                SERVICES
+              </div>
 
               <div className="space-y-[2px]">
                 {services.map((s) => {
@@ -273,70 +314,76 @@ export default function CollectionHeader() {
                       ].join(" ")}
                     >
                       {s.name}
-                      <div className="mt-0.5 text-[12px] font-light text-black/60">{s.category}</div>
+                      <div className="mt-0.5 text-[12px] font-light text-black/60">
+                        {s.category}
+                      </div>
                     </button>
                   );
                 })}
               </div>
 
-              <div className="mt-5 pt-4">
+              <div className="mt-5 pt-4 border-t border-black/10">
                 <Link
-                  href={activeService.href}
+                  href="/collection"
                   onClick={closeAll}
                   className="text-[13px] font-light text-black/70 hover:text-black transition inline-flex items-center gap-2"
                 >
-                  Explore {activeService.name} <span aria-hidden>→</span>
+                  About Calisto Collection <span aria-hidden>→</span>
                 </Link>
               </div>
             </div>
 
             {/* Right column: service-specific overview */}
             <div className="min-w-0">
-              <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">OVERVIEW</div>
+              <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">
+                {activeService.category.toUpperCase()}
+              </div>
 
-              <div className="text-[11px] tracking-[0.22em] text-black/45 mb-2">{activeService.category.toUpperCase()}</div>
-              <div className="text-[22px] font-light tracking-[-0.01em] text-black mb-2">{activeService.name}</div>
-              <div className="text-[14px] font-light leading-relaxed text-black/70 max-w-[72ch]">{activeService.overview}</div>
+              <div className="text-[22px] font-light tracking-[-0.01em] text-black mb-3">
+                {activeService.name}
+              </div>
+              <div className="text-[14px] font-light leading-relaxed text-black/75 max-w-[68ch] mb-6">
+                {activeService.overview}
+              </div>
 
-              <div className="mt-6 pt-5">
-                <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">CAPABILITIES</div>
+              <div className="mb-3 text-[11px] tracking-[0.22em] text-black/45">
+                KEY CAPABILITIES
+              </div>
 
-                <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
-                  {activeService.highlights.slice(0, 10).map((h) => (
-                    <li key={h} className={`flex items-start gap-2 ${CAP_TEXT}`}>
-                      <CheckIcon />
-                      <span className="leading-relaxed">{h}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="grid grid-cols-2 gap-x-8 gap-y-2 mb-6">
+                {activeService.highlights.slice(0, 10).map((h) => (
+                  <li key={h} className={`flex items-start gap-2 ${CAP_TEXT}`}>
+                    <CheckIcon />
+                    <span className="leading-relaxed">{h}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Link
-                    href={activeService.primaryCta.href}
-                    onClick={closeAll}
-                    className="inline-flex items-center justify-center rounded-[2px] px-4 py-2 text-[14px] font-normal text-black shadow-[0_10px_28px_rgba(0,0,0,0.10)] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition"
-                    style={{ background: "rgba(246,193,217,0.45)" }}
-                  >
-                    {activeService.primaryCta.label}
-                  </Link>
+              <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-black/10">
+                <Link
+                  href={activeService.primaryCta.href}
+                  onClick={closeAll}
+                  className="inline-flex items-center justify-center rounded-[2px] px-4 py-2 text-[14px] font-normal text-black shadow-[0_10px_28px_rgba(0,0,0,0.10)] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition"
+                  style={{ background: "rgba(246,193,217,0.45)" }}
+                >
+                  {activeService.primaryCta.label}
+                </Link>
 
-                  <Link
-                    href={activeService.secondaryCta.href}
-                    onClick={closeAll}
-                    className="inline-flex items-center justify-center rounded-[2px] px-4 py-2 text-[14px] font-normal text-black shadow-[0_10px_28px_rgba(0,0,0,0.10)] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition"
-                  >
-                    {activeService.secondaryCta.label}
-                  </Link>
+                <Link
+                  href={activeService.secondaryCta.href}
+                  onClick={closeAll}
+                  className="inline-flex items-center justify-center rounded-[2px] px-4 py-2 text-[14px] font-normal text-black shadow-[0_10px_28px_rgba(0,0,0,0.10)] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition"
+                >
+                  {activeService.secondaryCta.label}
+                </Link>
 
-                  <Link
-                    href={activeService.href}
-                    onClick={closeAll}
-                    className="ml-auto inline-flex items-center gap-2 text-[14px] font-light"
-                    style={{ color: "var(--cal-accent)" }}
-                  >
-                    View {activeService.name} <span aria-hidden>→</span>
-                  </Link>
-                </div>
+                <Link
+                  href={activeService.href}
+                  onClick={closeAll}
+                  className="ml-auto inline-flex items-center gap-2 text-[14px] font-light text-[#F6C1D9] hover:text-[#e5b0c8] transition"
+                >
+                  Explore {activeService.name} <span aria-hidden>→</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -402,8 +449,19 @@ function TopNavButton({
 
 function CheckIcon() {
   return (
-    <svg className="mt-[2px] shrink-0" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d="M7.8 13.6 4.7 10.5l1.1-1.1 2 2 6-6 1.1 1.1-7.1 7.1z" fill="var(--cal-accent)" />
+    <svg
+      className="mt-[2px] shrink-0"
+      width="16"
+      height="16"
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M7.8 13.6 4.7 10.5l1.1-1.1 2 2 6-6 1.1 1.1-7.1 7.1z"
+        fill="currentColor"
+        style={{ color: "#F6C1D9" }}
+      />
     </svg>
   );
 }

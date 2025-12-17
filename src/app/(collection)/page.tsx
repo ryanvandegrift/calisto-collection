@@ -9,209 +9,464 @@ export default function CollectionHomePage() {
   return (
     <>
       <HeroCover
-        backgroundImage="https://calistomedia.blob.core.windows.net/calisto-collection/collection-hero.jpg"
-        kicker="Calisto Collection · Flagship Portfolio · Operated on Calisto Pro"
-        title="Calisto Collection: Flagship Homes, Villas & Hotels Operated by Calisto"
-        subtitle="Calisto Collection is the private portfolio of homes, villas, and boutique hotels operated by Calisto. It brings three programs—Calisto Hosting, Calisto Management, and Calisto Boutique—under one calm, owner-facing brand, all powered by CalistoOS and coordinated through Calisto Pro with Calisto Key, Calisto Signal, and Calisto 24·7 behind every stay and visit."
+        backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/collection-hero.jpg"
+        kicker="Calisto Collection"
+        title="Calisto Collection: Flagship homes, villas, and boutique hotels operated by Calisto."
+        subtitle="A private portfolio run on Calisto Pro with live visibility into inspections, readiness, incidents, access, and spending. Standards are not promised. They are documented."
         primaryCTA={{
-          text: 'Explore the Collection',
-          href: '#programs',
+          text: 'Explore Services',
+          href: '#services',
         }}
         secondaryCTA={{
-          text: 'Talk to our team',
-          href: 'https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/',
+          text: 'See the Platform',
+          href: '#technology',
         }}
-        meta="Flagship villas · Second homes · Boutique hotels · Long-term operating partnerships"
-        tagline="CalistoOS is the engine, Calisto Pro is the platform, and Calisto Collection is where that stack comes to life. Calisto Key, Calisto Signal, and Calisto 24·7 add digital access, live signals, and human response so every key you own feels quietly protected."
+        meta="Live visibility | Photo evidence | 24/7 monitoring | Full audit trails"
+        tagline="Documentation beats promises."
       />
 
-      <section className="cal-section-block">
+      {/* The fundamental problem */}
+      <section className="cal-section-block cal-section-block--accent" id="problem">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="The Calisto ecosystem"
-            heading="A private portfolio, powered by a shared operating system"
-            description="Calisto Collection is the owner-facing brand for properties operated by Calisto. Behind the scenes, every stay, visit, inspection, project, and alert runs on CalistoOS and is orchestrated through Calisto Pro. Owners experience a calm, consistent service layer. Our teams work from a single, disciplined system that knows your properties, keys, signals, and guests."
+            kicker="The Owner Test"
+            heading="How do you verify the work when you are not there?"
+            description="Most managers send polished updates. The hard part is confirming what happened, when it happened, and who signed off."
           />
 
           <div className="cal-compare-grid">
             <CompareCard
-              title="Calisto Collection · The private portfolio"
-              text="A curated group of homes, villas, and boutique hotels where Calisto is the ongoing operating partner. Three programs—Hosting, Management, and Boutique—serve different asset types, but share one standard of care, one owner experience, and one philosophy across every address we accept."
+              title="Traditional Property Management"
+              text="You get periodic summaries and selective updates. Vendor work is hard to audit. Charges show up after the fact. Problems surface through guest feedback or during your next visit."
             />
-
             <CompareCard
-              title="CalistoOS & Calisto Pro · The engine underneath"
-              text="CalistoOS is the quality-first operating system. Calisto Pro is the operations platform our teams log into every day. Together, they keep reservations, inspections, tasks, devices, and deals aligned so the entire portfolio runs with the same discipline, regardless of property type or market."
-            />
-
-            <CompareCard
-              title="Key, Signal & 24·7 · The real-world layer"
-              text="Calisto Key manages digital access. Calisto Signal watches what sensors and smart devices see. Calisto 24·7 is the human team that can respond at any hour using that context. Together they turn a software stack into a feeling of safety and presence around the homes, villas, and hotels in the Collection."
+              title="Calisto Collection"
+              text="You see the operating record as it is created. Inspections, tasks, incidents, access, approvals, and receipts live in one system. You can verify outcomes without chasing anyone."
             />
           </div>
         </div>
       </section>
 
-      <section className="cal-section-block cal-section-block--accent" id="programs">
+      {/* The innovation */}
+      <section className="cal-section-block" id="innovation">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="The Calisto Collection programs"
-            heading="Three ways to bring your property into the Collection"
-            description="Each program is designed for a different kind of asset, but all share the same CalistoOS foundation, Calisto Pro platform, and access, signal, and support layers. Owners can start with one property and one program, then expand as their portfolio grows and diversifies."
+            kicker="What We Built"
+            heading="A new standard: operations you can verify."
+            description="Calisto Collection pairs luxury service with professional operating controls, so owners can see what is happening in real time."
+          />
+
+          <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 0' }}>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1.5rem', textAlign: 'center' }}>
+              Three services. One platform. One visibility standard.
+            </h3>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr 1fr',
+                gap: '2rem',
+                marginBottom: '3rem',
+              }}
+            >
+              <div style={{ textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#F6C1D9' }}>
+                  Calisto Hosting
+                </h4>
+                <p style={{ fontSize: '0.9rem' }}>Luxury vacation rental management</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#F6C1D9' }}>
+                  Calisto Boutique
+                </h4>
+                <p style={{ fontSize: '0.9rem' }}>White-label hotel operations</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#F6C1D9' }}>
+                  Calisto Estates
+                </h4>
+                <p style={{ fontSize: '0.9rem' }}>Private estate management</p>
+              </div>
+            </div>
+
+            <div
+              style={{
+                padding: '2rem',
+                background: 'rgba(246, 193, 217, 0.1)',
+                borderRadius: '8px',
+                textAlign: 'center',
+              }}
+            >
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
+                <strong>What unifies all three:</strong> Operations run on Calisto Pro, our institutional-grade
+                platform. Owners see activity in real time through Calisto One. Readiness is verified with photo
+                evidence. Incidents are logged as timelines. Charges map to work orders with receipts and approvals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The technology foundation */}
+      <section className="cal-section-block cal-section-block--accent" id="technology">
+        <div className="cal-main-inner">
+          <SectionIntro
+            kicker="Calisto Pro Platform"
+            heading="Enterprise infrastructure, applied to luxury property operations."
+            description="Calisto Collection runs on systems built for accountability. The platform keeps the record, so quality does not depend on memory or messaging."
           />
 
           <div className="cal-feature-grid cal-feature-grid--with-intro">
             <FeatureCard
-              meta="Flagship villas & residences"
+              meta="Calisto One"
+              title="Owner Command Center"
+              text="Live visibility into inspections, tasks, incidents, access history, and financial activity. Check in whenever you want, without waiting for a report."
+              list={[
+                'Live dashboard showing current property status',
+                'Complete task and workflow history',
+                'Financial transactions with receipt attachments',
+                'Incident timelines with documentation',
+              ]}
+            />
+
+            <FeatureCard
+              meta="Calisto Ops"
+              title="Operations Engine"
+              text="Every task runs through a defined workflow with assignments, requirements, approvals, and a record of completion."
+              list={[
+                'Reservation and calendar management',
+                'Task assignment with photo proof requirements',
+                'Vendor coordination with QA sign-off',
+                'Complete financial transparency',
+              ]}
+            />
+
+            <FeatureCard
+              meta="Calisto Assure"
+              title="Quality Verification"
+              text="Photo-based inspections with baseline comparison, so standards are measured and repeatable."
+              list={[
+                'Custom inspection routes for your property',
+                'AI comparison against approved baseline',
+                'Readiness scoring with correction protocols',
+                'Condition history trending over time',
+              ]}
+            />
+
+            <FeatureCard
+              meta="Calisto Signal"
+              title="24/7 Monitoring"
+              text="Sensors detect critical issues early. Alerts become managed incidents with actions, timestamps, and outcomes."
+              list={[
+                'Global monitoring across all time zones',
+                'Incident timelines from detection to resolution',
+                'Playbook-driven response protocols',
+                'Insurance-ready documentation',
+              ]}
+            />
+
+            <FeatureCard
+              meta="Calisto 24/7"
+              title="Professional Coverage"
+              text="Guest and owner communication coverage with transcripts and case history, so nothing gets lost."
+              list={[
+                'Dedicated phone number per property',
+                'Professional "Alex with Calisto" answering',
+                'Complete call transcripts and summaries',
+                'AI-powered message management',
+              ]}
+            />
+
+            <FeatureCard
+              meta="Calisto Access"
+              title="Access Control"
+              text="Time-bounded digital access with entry logs, so you always know who entered, when, and why."
+              list={[
+                'Digital key issuance and management',
+                'Time-limited vendor access codes',
+                'Entry/exit logging with timestamps',
+                'Integration with smart lock systems',
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Three services detailed */}
+      <section className="cal-section-block" id="services">
+        <div className="cal-main-inner">
+          <SectionIntro
+            kicker="Three Services"
+            heading="Choose the model that fits your property."
+            description="Each service is designed for a specific operating reality. All three run on the same platform and the same evidence standard."
+          />
+
+          <div className="cal-feature-grid cal-feature-grid--with-intro">
+            <FeatureCard
+              meta="Luxury Villas and Estates"
               title="Calisto Hosting"
-              text="The program for a small, handpicked network of villas and residences where Calisto runs every stay. Calisto Hosting combines luxury guest experience with disciplined operations, using CalistoOS, Calisto Pro, and Calisto Navigator to manage bookings, inspections, concierge, and reporting end-to-end, with Calisto Key, Signal, and 24·7 protecting each stay in the background."
+              text="Hands-off vacation rental management with hotel-level readiness and owner visibility. Built for properties that need both performance and protection."
+              list={[
+                'Pre-arrival inspections with photo verification',
+                'Professional guest services and 24/7 support',
+                'Revenue optimization with quality protection',
+                'Complete financial and operational visibility',
+                'IoT monitoring and incident management',
+                'Access control and audit trails',
+              ]}
             />
 
             <FeatureCard
-              meta="Second homes & primary residences"
-              title="Calisto Management"
-              text="Flagship home management for owners who want everything around their second home handled, including smart home, maintenance, projects, visits, and emergencies. Calisto Management uses Calisto Pro together with Key and Signal so doors, devices, and field teams stay aligned, with Calisto 24·7 available when something cannot wait for business hours."
-            />
-
-            <FeatureCard
-              meta="Hotels, villa resorts & branded residences"
+              meta="Boutique Hotels"
               title="Calisto Boutique"
-              text="Long-term operating partnerships for boutique hotels, villa clusters, and branded residences. Calisto Boutique brings the same technology, playbooks, and guest philosophy used across the Collection to multi-key assets, with Calisto Pro, Key, Signal, and 24·7 supporting on-site teams and protecting owner and investor expectations."
+              text="White-label hotel operations with real accountability. Built for owners and investors who want performance clarity without losing character."
+              list={[
+                'Commercial performance management',
+                'Quality assurance with evidence trails',
+                'Financial governance and controls',
+                'Weekly trading updates with actions',
+                'Stakeholder dashboard and reporting',
+                'Your brand, our operating system',
+              ]}
             />
+
+            <FeatureCard
+              meta="Private Estates"
+              title="Calisto Estates"
+              text="Discretion-first estate management with a clean operating record. Built for principals who want readiness, governance, and calm control."
+              list={[
+                'Systematic readiness maintenance',
+                'Vendor governance with approval controls',
+                'Access management with audit trails',
+                '24/7 incident detection and response',
+                'NDA-ready reporting and communication',
+                'Limited client load for focused attention',
+              ]}
+            />
+          </div>
+
+          <div style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="/hosting" className="cal-btn cal-btn-accent">
+              Explore Hosting
+            </a>
+            <a href="/boutique" className="cal-btn cal-btn-accent">
+              Explore Boutique
+            </a>
+            <a href="/estates" className="cal-btn cal-btn-accent">
+              Explore Estates
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="cal-section-block">
+      {/* The receipts */}
+      <section className="cal-section-block cal-section-block--accent" id="proof">
         <div className="cal-main-inner">
           <SectionIntro
-            kicker="Who we serve"
-            heading="Owners, families & investors with properties that matter"
-            description="Calisto Collection is intentionally small. We partner with people and projects where there is as much care for architecture, location, and guest experience as there is for yield. If that sounds like you, you're in the right place and you'll feel the difference that a full stack and a 24·7 human team can make."
-          />
-
-          <div className="cal-feature-grid cal-feature-grid--with-intro">
-            <FeatureCard
-              title="Individual flagship owners"
-              meta="One home · One villa · One hotel"
-              text="You own a singular home or property in a special place and want a partner who treats it as more than a line item. Calisto brings structure, teams, and technology around your property while protecting what makes it yours, from the way it is lit and secured to the way guests are welcomed."
-            />
-
-            <FeatureCard
-              title="Families & family offices"
-              meta="Multiple properties · Multiple markets"
-              text="You steward several homes, villas, and hospitality assets across destinations. Calisto Collection gives you one operating philosophy, one reporting language, and one partner to call, with a single view across keys, signals, occupancy, and projects at portfolio level."
-            />
-
-            <FeatureCard
-              title="Developers & investment partners"
-              meta="New builds · Repositions · Mixed use"
-              text="You're shaping or repositioning assets that blend private residences, villas, and boutique hospitality. Calisto becomes the operating partner behind the scenes, with Calisto Pro, Key, Signal, and 24·7 providing visible structure to buyers, lenders, and residents."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="cal-section-block cal-section-block--accent">
-        <div className="cal-main-inner">
-          <SectionIntro
-            kicker="How we work together"
-            heading="A deliberate, staged path into the Collection"
-            description="Calisto Collection relationships are measured in years, not seasons. We move carefully at the start so that once we're live, everyone—owners, guests, and teams—understands the standards we're protecting and the outcomes we're aiming for, across operations, access, devices, and support."
-          />
-
-          <div className="cal-feature-grid cal-feature-grid--with-intro">
-            <FeatureCard
-              meta="Step 1"
-              title="Discovery & fit"
-              text="We start with a conversation about your property, goals, and time horizon. Together we decide which program—Hosting, Management, or Boutique—is the right entry point, and which Calisto Pro modules and 24·7 coverage pattern match the way you want to use the asset."
-            />
-
-            <FeatureCard
-              meta="Step 2"
-              title="Blueprint, access & devices"
-              text="We map the operating model: service levels, technology rollout, local staffing, and financial structure. This includes the design of Calisto Key and Signal for your property so access, alerts, and maintenance all line up with how you and your guests actually live and stay in the space."
-            />
-
-            <FeatureCard
-              meta="Step 3"
-              title="Onboarding & continuous care"
-              text="We implement CalistoOS, launch through Calisto Pro, configure Key and Signal, and bring your property live as part of the Collection. From there, we run regular rhythms, walkthroughs, reviews, and planning sessions, with Calisto 24·7 and local teams working together."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="cal-section-block">
-        <div className="cal-main-inner">
-          <SectionIntro
-            kicker="Why Calisto Collection"
-            heading="One philosophy across every key you own"
-            description="Calisto Collection exists so owners don't have to juggle one partner for the hotel, another for the villa, and a third for their second home. Instead, you get one ecosystem that is designed for quality, built on technology, and delivered with quiet, high-touch service at any hour."
+            kicker="The Receipts"
+            heading="Ask for the proof. We will show it."
+            description="We can share redacted examples of inspections, incident logs, owner packs, and receipt-level reporting for qualified owners."
           />
 
           <div className="cal-compare-grid">
             <CompareCard
-              title="Quality you can see, not just feel"
-              text="CalistoOS and Calisto Assure bring photo-based standards, checklists, and inspections to every property. Owners and investors see proof of condition and care, not just promises, and can trace the history of work and decisions over the life of the asset."
+              title="Pre-Arrival Inspection Report"
+              text="Photos captured shortly before arrival. Readiness scored against a baseline. Issues flagged, corrected, and signed off with evidence."
             />
-
             <CompareCard
-              title="One relationship, many properties"
-              text="Whether you start with a single villa in Calisto Hosting or a hotel in Calisto Boutique, the same leadership team stands behind the relationship. Adding new properties becomes an extension of a conversation already underway and a system already tuned to the way you think."
+              title="Incident Response Timeline"
+              text="Alert time, dispatch time, actions taken, photos, costs, and follow-up plan. The record reads like a log, not a story."
             />
-
             <CompareCard
-              title="Security, access & response built in"
-              text="Calisto Key, Calisto Signal, and Calisto 24·7 are not optional extras. They are how we keep the homes, villas, and hotels in the Collection safe, ready, and responsive. You feel like someone is always paying attention because both the software and the people are."
+              title="Monthly Owner Pack"
+              text="Performance summary, maintenance completed with photo evidence, spending detail with receipts, and priorities for the month ahead."
             />
+            <CompareCard
+              title="Task Completion Evidence"
+              text="HVAC maintenance: work order created, technician arrived, service completed, photo proof captured, QA sign-off recorded, invoice attached, receipt stored."
+            />
+            <CompareCard
+              title="Access Activity Log"
+              text="Every entry tied to a person, a time, and a reason. Housekeeping, vendors, showings, and checks are all recorded."
+            />
+            <CompareCard
+              title="Financial Transparency"
+              text="Click a charge to see the linked work order, photos, approvals, invoice, and receipt. No guessing what the line item was."
+            />
+          </div>
+
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <a
+              className="cal-btn cal-btn-accent"
+              href="https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/"
+              style={{ display: 'inline-block' }}
+            >
+              Request Redacted Examples
+            </a>
+            <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.7 }}>
+              Available under NDA for qualified property owners
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="cal-section-block cal-section-block--accent">
+      {/* Competitive positioning */}
+      <section className="cal-section-block" id="difference">
+        <div className="cal-main-inner">
+          <SectionIntro
+            kicker="What Changes"
+            heading="The difference is the operating system."
+            description="It is not about nicer reports. It is about running the property with controls, evidence, and visibility."
+          />
+
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid #F6C1D9' }}>
+                  <th style={{ textAlign: 'left', padding: '1rem', fontWeight: 'bold' }}>Dimension</th>
+                  <th style={{ textAlign: 'left', padding: '1rem', fontWeight: 'bold' }}>Traditional Managers</th>
+                  <th style={{ textAlign: 'left', padding: '1rem', fontWeight: 'bold', color: '#F6C1D9' }}>Calisto Collection</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Visibility</td>
+                  <td style={{ padding: '1rem' }}>Periodic updates</td>
+                  <td style={{ padding: '1rem' }}>Live dashboard and history</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Quality</td>
+                  <td style={{ padding: '1rem' }}>Assumed</td>
+                  <td style={{ padding: '1rem' }}>Verified with photos and sign-off</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Spending</td>
+                  <td style={{ padding: '1rem' }}>Summary statements</td>
+                  <td style={{ padding: '1rem' }}>Receipts tied to work orders</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Incidents</td>
+                  <td style={{ padding: '1rem' }}>Ad hoc communication</td>
+                  <td style={{ padding: '1rem' }}>Timelines with outcomes</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Task Completion</td>
+                  <td style={{ padding: '1rem' }}>Status updates</td>
+                  <td style={{ padding: '1rem' }}>Evidence and audit trail</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(246, 193, 217, 0.3)' }}>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Access</td>
+                  <td style={{ padding: '1rem' }}>Shared codes or keys</td>
+                  <td style={{ padding: '1rem' }}>Time-limited access with logs</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '1rem', fontWeight: '600' }}>Disputes</td>
+                  <td style={{ padding: '1rem' }}>Conflicting accounts</td>
+                  <td style={{ padding: '1rem' }}>Timestamped record</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="cal-section-block" id="portfolio">
+        <div className="cal-main-inner">
+          <SectionIntro
+            kicker="Our Portfolio"
+            heading="A portfolio built on visibility."
+            description="Every property in Calisto Collection runs on the same operating system and the same documentation standard."
+          />
+
+          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#F6C1D9', marginBottom: '0.5rem' }}>18</div>
+                <div style={{ fontSize: '1rem' }}>Properties in Collection</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#F6C1D9', marginBottom: '0.5rem' }}>5.0</div>
+                <div style={{ fontSize: '1rem' }}>Guest Rating</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#F6C1D9', marginBottom: '0.5rem' }}>100%</div>
+                <div style={{ fontSize: '1rem' }}>Owner Retention</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#F6C1D9', marginBottom: '0.5rem' }}>0</div>
+                <div style={{ fontSize: '1rem' }}>Operational Disputes</div>
+              </div>
+            </div>
+
+            <div style={{ padding: '1.5rem', background: 'rgba(246, 193, 217, 0.1)', borderRadius: '8px' }}>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', fontStyle: 'italic' }}>
+                When the work is documented, the conversations get simpler.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="cal-section-block cal-section-block--accent" id="faq">
         <div className="cal-main-inner">
           <SectionIntro
             kicker="Questions"
-            heading="Frequently answered about Calisto Collection"
-            description="A few of the conversations we have early with owners, family offices, and developers considering bringing their properties into the Collection."
+            heading="What owners ask before making the switch."
+            description="The practical questions that come up before someone hands over the keys."
           />
 
           <div className="cal-faq-grid">
             <FAQCard
-              question="Is Calisto Collection a brand, a service, or a portfolio?"
-              answer="All three. Calisto Collection is the umbrella brand for properties operated by Calisto, the set of service programs they run on, and the private portfolio we curate with a small number of owners and partners that align with our philosophy."
+              question="How is this different from other property management companies?"
+              answer="Most managers provide periodic updates. Calisto Collection provides an operating record you can inspect at any time. You can review inspection photos, confirm task completion with timestamps, track incidents as timelines, and match charges to receipts and approvals inside one system."
             />
 
             <FAQCard
-              question="How do I know which program is right for my property?"
-              answer="During discovery, we look at how the property is used today and where you want it to go. A non-rented second home usually starts with Calisto Management. A luxury rental villa may join through Calisto Hosting. A multi-key asset is typically a fit for Calisto Boutique."
+              question="Which service is right for my property?"
+              answer="Calisto Hosting is for luxury vacation rentals with hotel-level operations. Calisto Boutique is for independent hotels that want white-label operations and clear performance reporting. Calisto Estates is for private residences that require discretion, governance, and ongoing readiness. We will recommend the best fit after a short call."
             />
 
             <FAQCard
-              question="Can multiple properties sit in different programs?"
-              answer="Yes. Many owners have a mix: a private residence in Management, a rental villa in Hosting, and a stake in a Boutique hotel. We treat each asset with the right program while keeping your relationship, reporting, and access unified at the Collection level."
+              question="Is this only for tech-savvy owners?"
+              answer="No. Calisto One is designed to be simple. Most owners use it like a quick check-in: last inspection, current status, open items, and recent spending. If you want details, they are there. If you do not, the system still keeps the record."
             />
 
             <FAQCard
-              question="How does the Calisto technology show up for me as an owner?"
-              answer="You see a calm portal view with clear status, reports, and plans. Behind that, Calisto Pro holds bookings, projects, and tasks. Calisto Key controls access, Calisto Signal watches devices and alerts, and Calisto 24·7 is available when guests or situations need a human response."
+              question="What if I'm happy with my current manager?"
+              answer="That is great. The question is whether you can verify performance when you want to. If you can see inspection evidence, incident history, access records, and receipt-level spending, you already have what most owners are missing."
             />
 
             <FAQCard
-              question="What kind of commitment do you require?"
-              answer="Collection relationships are structured as clear, multi-year agreements with calm exit provisions. The details vary by program, but the principle is the same: we invest seriously in each property, and we expect to be there long enough to create meaningful value."
+              question="Do I need to check the portal constantly?"
+              answer="No. It is visibility on your terms. You get alerts only when your attention is needed. Otherwise, you check in whenever you want."
+            />
+
+            <FAQCard
+              question="What happens when something goes wrong?"
+              answer="The goal is a clear timeline and a clean resolution. Alerts are logged, actions are assigned, outcomes are documented, and you can review the record whenever you want."
+            />
+
+            <FAQCard
+              question="Can you work with properties outside DR and Spain?"
+              answer="We are expanding strategically. If your property is elsewhere, contact us. We will tell you if we can support your area now, or what the timeline looks like."
+            />
+
+            <FAQCard
+              question="What is the investment level?"
+              answer="It varies by service and property. We share pricing during a short consultation once we understand your property, goals, and operating requirements."
             />
           </div>
         </div>
       </section>
 
       <FooterCTA
-        backgroundImage="https://calistomedia.blob.core.windows.net/calisto-collection/collection-footer-cta.jpg"
-        title="Bring your world into the Calisto Collection."
-        text="Whether you're starting with a single flagship home or aligning a portfolio of villas and hotels, Calisto Collection gives you one partner, one philosophy, and one system behind everything you own. Begin with the property that matters most today and grow from there."
-        ctaText="Explore the programs"
-        ctaHref="#programs"
+        backgroundImage="https://calistomedia.blob.core.windows.net/calisto-one/collection-footer.jpg"
+        title="Run your property with visibility, not guesswork."
+        text="Choose a service and see how Calisto Collection delivers documented standards through Calisto Pro."
+        ctaText="Schedule Consultation"
+        ctaHref="https://outlook.office365.com/owa/calendar/LetsTalk@calistoco.com/bookings/"
       />
     </>
   );
